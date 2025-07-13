@@ -1,6 +1,7 @@
 import 'package:go_router/go_router.dart';
 import 'package:paynetic/features/home/presentation/screens/home_screen.dart';
-import 'package:paynetic/features/onboarding/export.dart';
+import 'package:paynetic/features/home/presentation/widgets/bottombar_widget.dart';
+import 'package:paynetic/features/onboarding/export_onboard.dart';
 import 'package:paynetic/features/onboarding/presentation/screens/onboarding_screen.dart';
 
 final GoRouter router = GoRouter(
@@ -40,7 +41,7 @@ final GoRouter router = GoRouter(
       pageBuilder: (context, state) {
         return CustomTransitionPage(
           key: state.pageKey,
-          child: const HomeScreen(),
+          child: const HomeWithBottomNav(),
           transitionDuration: const Duration(milliseconds: 600),
           transitionsBuilder: (context, animation, secondaryAnimation, child) {
             return FadeTransition(
@@ -51,10 +52,10 @@ final GoRouter router = GoRouter(
         );
       },
     ),
-    // GoRoute(
-    //   path: '/register',
-    //   name: 'register',
-    //   builder: (context, state) => const RegisterScreen(),
-    // ),
+    GoRoute(
+      path: '/start',
+      name: 'start',
+      builder: (context, state) => const HomeWithBottomNav(),
+    ),
   ],
 );

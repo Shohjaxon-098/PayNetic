@@ -1,7 +1,7 @@
 
 
 
-import 'package:paynetic/features/onboarding/export.dart';
+import 'package:paynetic/features/onboarding/export_onboard.dart';
 
 class BoardWidget extends StatelessWidget {
   final BoardModel boardModel;

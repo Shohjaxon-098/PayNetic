@@ -1,4 +1,4 @@
-import 'package:paynetic/features/onboarding/export.dart';
+import 'package:paynetic/features/onboarding/export_onboard.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});

@@ -1,0 +1,44 @@
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:flutter/material.dart';
+import 'package:paynetic/features/home/presentation/screens/home_screen.dart';
+
+class HomeWithBottomNav extends StatefulWidget {
+  const HomeWithBottomNav({super.key});
+
+  @override
+  State<HomeWithBottomNav> createState() => _HomeWithBottomNavState();
+}
+
+class _HomeWithBottomNavState extends State<HomeWithBottomNav> {
+  int _currentIndex = 1; // Middle: Home by default
+
+  final List<Widget> _pages = const [
+    Center(child: Text("Referal Link")),
+    HomeScreen(), // TabBar + Task List
+    Center(child: Text("Balans")),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: _pages[_currentIndex],
+      bottomNavigationBar: CurvedNavigationBar(
+        index: _currentIndex, // 👉 default holatda Home bo'lishi uchun
+        backgroundColor: Colors.white,
+        color: Colors.deepPurple.shade300,
+        animationDuration: const Duration(milliseconds: 300),
+        onTap: (index) {
+          setState(() {
+            _currentIndex = index;
+          });
+        },
+        items: const [
+          Icon(Icons.link_outlined, color: Colors.white),
+          Icon(Icons.home_outlined, color: Colors.white),
+          Icon(Icons.account_balance_wallet_outlined, color: Colors.white),
+        ],
+      ),
+    );
+  }
+}
