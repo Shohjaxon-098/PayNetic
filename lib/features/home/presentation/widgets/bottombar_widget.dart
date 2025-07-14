@@ -33,10 +33,34 @@ class _HomeWithBottomNavState extends State<HomeWithBottomNav> {
             _currentIndex = index;
           });
         },
-        items: const [
-          Icon(Icons.link_outlined, color: Colors.white),
-          Icon(Icons.home_outlined, color: Colors.white),
-          Icon(Icons.account_balance_wallet_outlined, color: Colors.white),
+        items: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Image.asset(
+              'assets/icons/referal.png',
+              color: Colors.white,
+              height: 30,
+              width: 30,
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Image.asset(
+              'assets/icons/home.png',
+              color: Colors.white,
+              height: 30,
+              width: 30,
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Image.asset(
+              'assets/icons/wallet.png',
+              color: Colors.white,
+              height: 30,
+              width: 30,
+            ),
+          ),
         ],
       ),
     );
