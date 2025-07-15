@@ -22,11 +22,10 @@ class _HomeWithBottomNavState extends State<HomeWithBottomNav> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       body: _pages[_currentIndex],
       bottomNavigationBar: CurvedNavigationBar(
         index: _currentIndex, // 👉 default holatda Home bo'lishi uchun
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.grey.shade100,
         color: Color(0xFF7C4DFF),
         animationDuration: const Duration(milliseconds: 300),
         onTap: (index) {
