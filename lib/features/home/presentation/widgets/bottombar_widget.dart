@@ -1,6 +1,7 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:paynetic/features/home/presentation/screens/home_screen.dart';
+import 'package:paynetic/features/home/presentation/screens/wallet_screen.dart';
 
 class HomeWithBottomNav extends StatefulWidget {
   const HomeWithBottomNav({super.key});
@@ -15,7 +16,7 @@ class _HomeWithBottomNavState extends State<HomeWithBottomNav> {
   final List<Widget> _pages = const [
     Center(child: Text("Referal Link")),
     HomeScreen(), // TabBar + Task List
-    Center(child: Text("Balans")),
+    BalanceScreen(),
   ];
 
   @override
@@ -26,7 +27,7 @@ class _HomeWithBottomNavState extends State<HomeWithBottomNav> {
       bottomNavigationBar: CurvedNavigationBar(
         index: _currentIndex, // 👉 default holatda Home bo'lishi uchun
         backgroundColor: Colors.white,
-        color: Colors.deepPurple.shade300,
+        color: Color(0xFF7C4DFF),
         animationDuration: const Duration(milliseconds: 300),
         onTap: (index) {
           setState(() {

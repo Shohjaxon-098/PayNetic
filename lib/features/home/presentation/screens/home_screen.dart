@@ -38,7 +38,7 @@ class HomeScreen extends StatelessWidget {
             margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
             padding: const EdgeInsets.all(4),
             decoration: BoxDecoration(
-              color: Colors.deepPurple.shade300,
+              color: Color(0xFF7C4DFF),
               borderRadius: BorderRadius.circular(16),
             ),
             child: TabBar(
