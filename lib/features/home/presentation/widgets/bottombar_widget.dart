@@ -1,6 +1,7 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:paynetic/features/home/presentation/screens/home_screen.dart';
+import 'package:paynetic/features/home/presentation/screens/referal_screen.dart';
 import 'package:paynetic/features/home/presentation/screens/wallet_screen.dart';
 
 class HomeWithBottomNav extends StatefulWidget {
@@ -13,8 +14,11 @@ class HomeWithBottomNav extends StatefulWidget {
 class _HomeWithBottomNavState extends State<HomeWithBottomNav> {
   int _currentIndex = 1; // Middle: Home by default
 
-  final List<Widget> _pages = const [
-    Center(child: Text("Referal Link")),
+  final List<Widget> _pages = [
+    ReferralScreen(referralCode: 'friend', invitedFriends: [
+     
+      ],
+    ),
     HomeScreen(), // TabBar + Task List
     BalanceScreen(),
   ];
